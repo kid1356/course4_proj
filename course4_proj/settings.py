@@ -25,7 +25,7 @@ class Dev(Configuration):
     # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = 'django-insecure-zaiqyyg8b%h58-f)dga!6sgs$tkk1qi*m_$gv=w=%_3)pdj@e@'
     
-    OMDB_KEY = "b52a5424"
+    OMDB_KEY = 'b52a5424'
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = True
 
@@ -38,7 +38,8 @@ class Dev(Configuration):
     CSRF_COOKIE_SAMESITE = "None"
     SESSION_COOKIE_SAMESITE = "None"
 
-
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    ADMINS = [("Ben", "ben@example.com")]
     # Application definition
 
     INSTALLED_APPS = [
