@@ -50,6 +50,7 @@ class Dev(Configuration):
         'django.contrib.staticfiles',
         'movies',
         'gh',
+        'django_celery_results',
     ]
 
     MIDDLEWARE = [
@@ -81,6 +82,9 @@ class Dev(Configuration):
     ]
 
     WSGI_APPLICATION = 'course4_proj.wsgi.application'
+    
+    CELERY_RESULT_BACKEND = "django-db"
+    CELERY_BROKER_URL = "redis://localhost:6379/0"
 
 
     # Database
